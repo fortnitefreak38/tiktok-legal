@@ -1,0 +1,48 @@
+{
+ "fetched_at": "2026-10-14T06:04:37+02:00",
+ "source": "Composio TIKTOK_GET_USER_STATS + TIKTOK_LIST_VIDEOS",
+ "user": {
+  "display_name": "Unsaid Truths",
+  "username": "unsaid.truthss",
+  "avatar": "static/avatar.png",
+  "follower_count": 61,
+  "following_count": 203,
+  "likes_count": 117,
+  "video_count": 3
+ },
+ "videos": [
+  {
+   "id": "7696186517160578336",
+   "title": "Some people don't leave. They just stop trying.",
+   "views": 243,
+   "likes": 1,
+   "comments": 0,
+   "duration": 10,
+   "create_time": 1791908065,
+   "url": "https://www.tiktok.com/@unsaid.truthss/video/7696186517160578336",
+   "cover": "static/covers/7696186517160578336.jpg"
+  },
+  {
+   "id": "7683740700730559777",
+   "title": "Some teach you how to love. Others teach you how to let go. 💔",
+   "views": 752,
+   "likes": 3,
+   "comments": 1,
+   "duration": 23,
+   "create_time": 1789010325,
+   "url": "https://www.tiktok.com/@unsaid.truthss/video/7683740700730559777",
+   "cover": "static/covers/7683740700730559777.jpg"
+  },
+  {
+   "id": "7683671418596330784",
+   "title": "Not every silence is a goodbye. Not every fight means it's over.",
+   "views": 248,
+   "likes": 4,
+   "comments": 0,
+   "duration": 23,
+   "create_time": 1788994168,
+   "url": "https://www.tiktok.com/@unsaid.truthss/video/7683671418596330784",
+   "cover": "static/covers/7683671418596330784.jpg"
+  }
+ ]
+}

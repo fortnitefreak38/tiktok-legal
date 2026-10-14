@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hermes – Post</title><link rel="stylesheet" href="static/style.css"></head><body><nav><img src="static/icon.png"><b>Hermes</b><span class="sp"></span><a href="dashboard.html">Dashboard</a><a href="upload.html">Upload</a></nav>
+<div class="wrap" style="max-width:640px"><div class="card"><h2 style="margin-top:0">Post a video to TikTok</h2>
+<div class="prof" style="gap:12px"><img src="static/avatar.png" style="width:44px;height:44px;border-width:2px"><div>Posting as <b>@unsaid.truthss</b></div></div>
+<form id="f"><label>Video file (MP4/MOV)</label><input type="file" id="vf" accept="video/*" required>
+<label>Caption</label><textarea id="cap" rows="3" maxlength="2200" placeholder="Write a caption… #hashtags"></textarea>
+<label>Who can view this video</label><select><option value="SELF_ONLY">Only me (SELF_ONLY)</option></select>
+<div class="note">Only “Only me” is available while Hermes is pending TikTok app review.</div>
+<label style="font-weight:400"><input type="checkbox" required style="width:auto"> By posting, I agree to TikTok's <a style="color:#ff9bd8" href="https://www.tiktok.com/legal/page/global/music-usage-confirmation/en" target="_blank">Music Usage Confirmation</a>.</label>
+<button class="btn g" id="b">Post to TikTok</button>
+<div class="note" style="margin-top:12px">Posting runs via the Hermes backend using the TikTok Content Posting API (privacy_level SELF_ONLY).</div></form>
+<div id="st" class="steps" style="margin-top:20px"></div></div></div>
+<script>
+f.onsubmit=e=>{e.preventDefault();b.disabled=true;const file=vf.files[0];
+const S=[['Preparing video ('+(file.size/1048576).toFixed(1)+' MB)…',15],['Uploading to Hermes backend…',45],['Initializing TikTok upload (SELF_ONLY)…',70],['Transferring video to TikTok…',95],['Upload queued – sent to TikTok inbox for review',100]];
+st.innerHTML='<div class="bar"><i class="g" id="pb"></i></div><div id="sl"></div>';let i=0;
+const step=()=>{const [t,p]=S[i];pb.style.width=p+'%';sl.innerHTML+='<p>'+(i<S.length-1?'⏳ ':'📥 ')+t+'</p>';
+if(++i<S.length)setTimeout(step,1200);else sl.innerHTML+='<p class="note">TikTok is processing the video. Open the TikTok app inbox to finish posting.</p>'};step()}
+</script></body></html>
